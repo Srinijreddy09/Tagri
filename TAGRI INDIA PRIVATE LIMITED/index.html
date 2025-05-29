@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loginPage" class="page">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required /><br />
+      <input type="password" id="password" placeholder="Password" required /><br />
+      <button type="submit">Login</button>
+    </form>
+    <p id="loginError" class="error"></p>
+    <p>sample username:admin</p>
+    <p> password:admin123</p>
+  </div>
+
+  <div id="employeePage" class="page hidden">
+    <h2>Add Employee</h2>
+    <form id="employeeForm">
+      <label>Employee ID: <input type="text" id="empId" readonly /></label><br/>
+      <label>First Name: <input type="text" id="firstName" required /></label><br/>
+      <label>Last Name: <input type="text" id="lastName" required /></label><br/>
+      <label>Middle Name: <input type="text" id="middleName" /></label><br/>
+      <label>Login ID: <input type="text" id="loginId" readonly /></label><br/>
+      <label>DOB: <input type="date" id="dob" required /></label><br/>
+      <label>Department:
+        <select id="department" required>
+          <option value="">Select</option>
+          <option value="Engineering">Engineering</option>
+          <option value="Support">Support</option>
+          <option value="HR">HR</option>
+          <option value="Finance">Finance</option>
+        </select>
+      </label><br/>
+      <label>Salary: <input type="number" id="salary" required /></label><br/>
+      <label>Permanent Address: <input type="text" id="permAddress" required /></label><br/>
+      <label>Current Address: <input type="text" id="currAddress" required /></label><br/>
+      <label>ID Proof (PDF only, 10KB–1MB): <input type="file" id="idProof" accept="application/pdf" required /></label><br/>
+      <button type="submit">Add Employee</button>
+      <p id="empFormMsg" class="error"></p>
+    </form>
+
+    <h2>Search Employees</h2>
+    <form id="searchForm">
+      <input type="text" id="searchEmpId" placeholder="Employee ID" />
+      <input type="text" id="searchFirstName" placeholder="First Name" />
+      <input type="text" id="searchLastName" placeholder="Last Name" />
+      <input type="text" id="searchLoginId" placeholder="Login ID" />
+      <input type="date" id="searchDobFrom" />
+      <input type="date" id="searchDobTo" />
+      <select id="searchDepartment">
+        <option value="">All Departments</option>
+        <option value="Engineering">Engineering</option>
+        <option value="Support">Support</option>
+        <option value="HR">HR</option>
+        <option value="Finance">Finance</option>
+      </select>
+      <button type="button" onclick="searchEmployees()">Search</button>
+    </form>
+
+    <table id="resultsTable">
+      <thead>
+        <tr>
+          <th>Emp ID</th><th>Name</th><th>Login ID</th><th>DOB</th>
+          <th>Department</th><th>Salary</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
