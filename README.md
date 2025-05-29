@@ -45,3 +45,9 @@ project-root/
 ├── index.html # Login page
 ├── style.css # CSS styles for login
 ├── script.js # JavaScript logic for login validation
+![Screenshot 2025-05-29 205533](https://github.com/user-attachments/assets/c84e1033-0a30-47d5-aaac-d0a96887f6f7)
+
+![Screenshot 2025-05-29 205617](https://github.com/user-attachments/assets/8caf05b5-9585-436b-a6f6-ad6560c06f93)
+
+![Screenshot 2025-05-29 205631](https://github.com/user-attachments/assets/c425fe29-8267-4f18-9126-9642d22e13c8)
+
